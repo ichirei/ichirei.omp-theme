@@ -1,0 +1,94 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+        "arrow": "#BFEA7C",
+        "folder": "#FFF67E",
+        "shell": "#89E051",
+        "closer": "#B0B0B0",
+        "blue": "#0090ff",
+        "rose": "#F6A192",
+        "white": "#FFFFFF",
+        "pink": "#FDCEDF"
+  },
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "p:blue",
+          "foreground": "p:white",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "template": " {{ .UserName }} ",
+          "type": "session"
+        },
+        {
+          "foreground": "p:folder",
+          "style": "plain",
+          "template": "  ",
+          "type": "text"
+        },
+        {
+          "foreground": "p:blue",
+          "properties": {
+            "style": "folder"
+          },
+          "style": "plain",
+          "template": "{{ .Folder }} ",
+          "type": "path"
+        },
+        {
+          "foreground": "p:rose",
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "cherry_pick_icon": "\ue29b ",
+            "commit_icon": "\uf417 ",
+            "fetch_status": false,
+            "fetch_upstream_icon": false,
+            "merge_icon": "\ue727 ",
+            "no_commits_icon": "\uf0c3 ",
+            "rebase_icon": "\ue728 ",
+            "revert_icon": "\uf0e2 ",
+            "tag_icon": "\uf412 "
+          },
+          "template": "{{ .HEAD }} ",
+          "style": "plain",
+          "type": "git"
+        },
+        {
+          "foreground": "p:closer",
+          "style": "plain",
+          "template": "\uf105",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "p:shell",
+          "style": "plain",
+          "template": "\uf489 {{ .Name }}",
+          "type": "shell"
+        },
+        {
+          "foreground": "p:white",
+          "style": "plain",
+          "template": " at ",
+          "type": "text"
+        },
+        {
+          "foreground": "p:pink",
+          "style": "plain",
+          "template": " {{ .CurrentDate | date .Format }} ",
+          "type": "time"
+        }
+      ],
+      "type": "rprompt"
+    }
+  ],
+  "final_space": true,
+  "version": 3
+}
